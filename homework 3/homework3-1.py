@@ -1,18 +1,18 @@
 from string import ascii_lowercase
-RUalphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+alphabet_ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
-def checkENG(s):
+def check_eng(s):
     return set(ascii_lowercase)-set(s.lower()) == set([])
-string = input('Enter String in English: ')
-if(checkENG(string)==True):
+string_eng = input('Enter String in English: ')
+if(check_eng(string_eng)==True):
     print('This is a pangram')
 else:
     print('This is not a pangram')
 
-def checkRU(s):
-     return set(RUalphabet)-set(s.lower()) == set([])
-stringRU = input('Введите текст на русском: ')
-if(checkRU(stringRU)==True):
+def check_ru(s):
+     return set(alphabet_ru)-set(s.lower()) == set([])
+string_ru = input('Введите текст на русском: ')
+if(check_ru(string_ru)==True):
     print('Это Панграмма')
 else:
     print('Это не Панграмма')
